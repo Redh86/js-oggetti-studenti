@@ -11,45 +11,42 @@
 $(document).ready(function (){
     
     var studente = {
-         "nome" : "Dario",
-         "cognome" : "Tedeschi",
-         "eta" : "34",
+         "Nome" : "Dario",
+         "Cognome" : "Tedeschi",
+         "Eta" : "34",
     };
 
     for (var key in studente) {
-         console.log(studente[key]);
+         console.log(key + ": " + studente[key]);
     };
 
     var aula = [
     {
-        "nome" : "Franco",
-        "cognome" : "Franchi",
-        "eta" : "34",
+        "Nome" : "Franco",
+        "Cognome" : "Franchi",
+        "eEta" : "34",
     },
     {
-        "nome" : "Carlo",
-        "cognome" : "Carli",
-        "eta" : "34",
+        "Nome" : "Carlo",
+        "Cognome" : "Carli",
+        "Eta" : "34",
     },
     {
-        "nome" : "Luca",
-        "cognome" : "Luchi",
-        "eta" : "34",
+        "Nome" : "Luca",
+        "Cognome" : "Luchi",
+        "Eta" : "34",
     }
     ];
 
     for (var dati in aula){
-        console.log(aula[dati]);
+        console.log((aula[dati]["Nome"]) + " " + (aula[dati]["Cognome"]));
     };
 
-   
-    var nome = prompt("Nome Studente");
-    var cognome = prompt("Cognome Studente");
-    var età = parseInt(prompt("Età Studente"));
+    studente.Nome = prompt("Nome Studente");
+    studente.Cognome = prompt("Cognome Studente");
+    studente.Eta = parseInt(prompt("Età Studente"));
     
-    var nuovoStudente = nome + cognome + età;
-
-    aula.push(nuovoStudente);
+    aula.push(studente);
     console.log(aula);
 
 });
